@@ -53,9 +53,8 @@
         }
     </style>
     <script>
-        function toggleDropdown() {
-            var dropdownContent = document.getElementById("dropdown-content-id");
-            dropdownContent.classList.toggle("show");
+        function showEmail() {
+            document.getElementById("dropdown-content-id").style.display = "block";
         }
 </script>
 </head>
@@ -83,7 +82,7 @@
             <p></p>
             <p>Any questions or comments? Feel free to send me an email. </p>
 
-            <button onclick="toggleDropdown()">Show my email</button>
+            <button onclick="showEmail()">Show my email</button>
             <div class="dropdown-content" id="dropdown-content-id">
                 <p>My email is: wu80205@gmail.com</p>
             </div>
