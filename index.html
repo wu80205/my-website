@@ -26,6 +26,7 @@
         .main {
             margin-top: 20%;
             margin-bottom: 40%;
+            max-width: 1000px;
         }
         nav {
             background-color: #333;
@@ -47,13 +48,21 @@
             text-decoration: none;
             color: #fff;
         }
+        .dropdown-content {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdown-content-id");
+            dropdownContent.classList.toggle("show");
+        }
+</script>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
             <!-- Add more menu items as needed -->
         </ul>
     </nav>
@@ -63,9 +72,22 @@
             <p>There's nothing special about it. Or is it...?</p>
         </div>
         <div class="main">
-            <p>I mean, there's a bit of text here...</p>
-            <p>
-            <p>...and there...</p>
+            <h2 id="title">~~~ ABOUT ME ~~~</h2>
+            <p>Hello World! I'm Jason, and what you're seeing here is (obviously) my website.</p>
+            <p></p>
+            <p>As you can probably tell, the reason why I have a website like this is because (you guessed it, ) I am a developer, and this was all written using HTML.</p>
+            <p></p>
+            <p>Despite not being too experienced, I can at least program in some other languages like Python, Java and C.</p>
+            <p></p>
+            <p>I started my passion for programming when I was only 7, and in fact, my programming teacher said that they were amazed by the programs I wrote at the time. That was what led me to writing this webpage to share my story with you.</p>
+            <p></p>
+            <p>Any questions or comments? Feel free to send me an email. </p>
+
+            <button onclick="toggleDropdown()">Show my email</button>
+            <div class="dropdown-content" id="dropdown-content-id">
+                <p>My email is: wu80205@gmail.com</p>
+            </div>
+            
         </div>
     </div>
 </body>
